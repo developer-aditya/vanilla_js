@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css">
+    <style>
+        .shadow {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .shadow-hover {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .shadow-hover:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+    </style>
+    <title>Weather App</title>
+</head>
+
+<body
+    style="min-height: 100vh; background: url(./miui-8-2560x1440-rainy-weather-background-minimal-hd-10471.png) no-repeat center center/cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto text-center">
+                <div class="mt-5 p-5 bg-primary rounded shadow">
+                    <h1 id="w-location"></h1>
+                    <h3 class="text-dark" id="w-status"></h3>
+                    <h3 id="w-string"></h3>
+                    <img id="w-icon">
+                    <ul class="list-group mt-3">
+                        <li class="list-group-item" id="w-humidity"></li>
+                        <li class="list-group-item" id="w-visibility"></li>
+                        <li class="list-group-item" id="w-feels-like"></li>
+                        <li class="list-group-item" id="w-wind"></li>
+                    </ul>
+                    <hr>
+
+                    <button type="button" id="change" class="btn btn-primary shadow-hover" data-toggle="modal"
+                        data-target="#changeModal">Change
+                        Location
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modals -->
+    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Location</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="location-form">
+                        <div class="form-group">
+                            <label for="location-city"> City</label>
+                            <input type="text" name="location-city" id="location-city" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="location-country"> Country</label>
+                            <input type="text" name="location-state" id="location-country" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button form="location-form" type="submit" class="btn btn-primary">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./weather.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./storage.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+      <!-- Compiled and minified CSS -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="./spacing.css" />
+
+      <title>traCAL</title>
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper light-blue darken-1">
+            <div class="container">
+               <a href="#" class="brand-logo center">traCAL</a>
+               <ul class="right">
+                  <li>
+                     <a id="clear" href="badges.html">
+                        <i class="material-icons right">clear_all</i>Clear All
+                     </a>
+                  </li>
+                  <li>
+                     <a id="reload" href="sass.html">
+                        <i class="material-icons right">refresh</i>Refresh</a
+                     >
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <div class="container">
+         <div class="card mt-5">
+            <div class="card-content">
+               <span class="card-title m-2">Add Meal / Food Item</span>
+               <form id="entry-form" class="col m-2">
+                  <div class="row">
+                     <div class="input-field col s6">
+                        <input id="meal" type="text" class="validate" />
+                        <label for="meal">Meal</label>
+                     </div>
+                     <div class="input-field col s6">
+                        <input id="calorie" type="number" class="validate" />
+                        <label for="calorie">Calories</label>
+                     </div>
+                  </div>
+                  <button
+                     id="add-meal"
+                     class="waves-effect waves-light btn teal lighten-1"
+                     type="submit"
+                  >
+                     <i class="material-icons right"> add_circle_outline </i>
+                     Add Meal
+                  </button>
+                  <button
+                     id="update-meal"
+                     class="waves-effect waves-light btn cyan darken-1"
+                     style="display: none"
+                     type="submit"
+                  >
+                     <i class="material-icons right"> update </i>
+                     Update Meal
+                  </button>
+                  <button
+                     id="delete-meal"
+                     class="waves-effect waves-light btn deep-orange"
+                     style="display: none"
+                     type="submit"
+                  >
+                     <i class="material-icons right"> remove_circle_outline </i>
+                     Delete Meal
+                  </button>
+                  <button
+                     id="back"
+                     style="display: none"
+                     class="waves-effect waves-light btn grey right"
+                     type="submit"
+                  >
+                     <i class="material-icons right"> reply_all </i>
+                     Back
+                  </button>
+               </form>
+            </div>
+         </div>
+
+         <h3 class="mt-5 center">Total Calories : <span id="total-calories">0</span></h3>
+
+         <ul id="item-list" class="collection mt-5"></ul>
+      </div>
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+      <script src="./app.js"></script>
+   </body>
+</html>

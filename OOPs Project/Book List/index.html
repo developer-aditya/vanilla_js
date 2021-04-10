@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+         integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg="
+         crossorigin="anonymous"
+      />
+
+      <link
+         rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+         crossorigin="anonymous"
+      />
+
+      <style>
+         .shadow {
+            padding: 4rem;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+               0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+         }
+         .alert {
+            padding: 1.2rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            border: 1px solid;
+         }
+         .error {
+            background-color: rgba(255, 0, 0, 0.363);
+            border-color: rgb(214, 37, 37);
+         }
+         .success {
+            background-color: rgba(16, 175, 16, 0.466);
+            border-color: rgb(12, 150, 12);
+         }
+         .info {
+            background-color: rgba(18, 183, 212, 0.521);
+            border-color: rgb(10, 142, 165);
+         }
+      </style>
+      <title>Book List</title>
+   </head>
+
+   <body>
+      <div style="background-color: #fdfdfd;" class="container shadow">
+         <h2 style="margin-bottom: 3rem;">New Book Entry</h2>
+         <form id="entry-form" class="u-full-width">
+            <div class="input-group">
+               <label for="bookname"> Book Name </label>
+               <input type="text" name="name" id="name" class="u-full-width" />
+            </div>
+            <div class="input-group">
+               <label for="authorname"> Author Name </label>
+               <input type="text" name="author" id="author" class="u-full-width" />
+            </div>
+            <div class="input-group">
+               <label for="price"> Price </label>
+               <input type="number" name="price" id="price" class="u-full-width" />
+            </div>
+            <div class="input-group">
+               <label for="ISBN"> ISBN# </label>
+               <input type="text" name="isbn" id="isbn" class="u-full-width" />
+            </div>
+            <div style="margin-top: 2rem;">
+               <input class="button" type="submit" value="Submit" />
+            </div>
+         </form>
+         <hr />
+
+         <div class="table">
+            <table class="u-full-width">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Author</th>
+                     <th>Price</th>
+                     <th>ISBN</th>
+                  </tr>
+               </thead>
+               <tbody id="book-list"></tbody>
+            </table>
+         </div>
+      </div>
+
+      <!-- APP JS -->
+      <script async type="text/javascript" src="./appES6.js"></script>
+   </body>
+</html>

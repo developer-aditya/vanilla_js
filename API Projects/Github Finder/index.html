@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+   <style>
+      .shadow {
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+
+      .shadow-hover {
+         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+         transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      }
+
+      .shadow-hover:hover {
+         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+
+      .shadow-1 {
+         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+   </style>
+   <title>Github Finder</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-dark bg-primary p-3 mb-5">
+      <div class="container">
+         <a href="#" class="navbar-brand">Github Finder</a>
+      </div>
+   </nav>
+   <div class="container" id="searchContainer">
+      <div class="search card card-body mb-4 shadow-hover">
+         <h1>Search GitHub Users</h1>
+         <p class="lead">Enter a username to fetch a user profile and repos</p>
+         <input type="text" name="userText" id="user-input" class="form-control" placeholder="Github UserName....">
+      </div>
+   </div>
+
+   <br>
+
+   <div style="min-height: 41.75vh;" id="profile"></div>
+
+   <footer class="border bg-primary text-center text-white bg-light p-3 mt-5">Github Finder &copy;
+   </footer>
+
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+
+
+   <script src="./github.js"></script>
+   <script src="./ui.js"></script>
+   <script src="./app.js"></script>
+
+</body>
+
+</html>
